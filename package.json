@@ -1,0 +1,25 @@
+{
+  "name": "eslint-config-caju",
+  "version": "1.0.0",
+  "description": "Caju ESLint config, following our styleguid",
+  "scripts": {
+    "lint": "eslint index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caju-beneficios/javascript-style-guide.git"
+  },
+  "keywords": [
+    "eslint",
+    "javascript",
+    "caju"
+  ],
+  "author": "Caju Empresa Brasileira de Benefícios e Pagamentos Ltda.",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "2.23.4"
+  }
+}
