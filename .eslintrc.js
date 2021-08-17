@@ -1,5 +1,7 @@
 module.exports = {
-  extends: ['airbnb-base'],
+  extends: [
+    'airbnb-base',
+  ],
   rules: {
     semi: [2, 'never'],
     'no-multiple-empty-lines': [
@@ -50,4 +52,16 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx'],
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+      ],
+      parser: '@typescript-eslint/parser',
+      plugins: [
+        '@typescript-eslint',
+      ],
+    },
+  ],
 }
