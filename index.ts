@@ -1,17 +1,17 @@
-function foo() {
+function foo(): number {
   if (true) {
-    return true
+    return 1
   }
 
   if (true) {
-    return true
+    return 1
   }
 
   if (true) {
-    return true
+    return 1
   }
 
-  return true
+  return 1
 }
 
 export default foo
