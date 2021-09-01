@@ -9,7 +9,7 @@ To install this package and its dependencies:
 ```bash
 $ npm install --save-dev eslint@7.32.0 \
                          eslint-plugin-import@2.23.4 \
-                         @caju-beneficios/eslint
+                         eslint-config-caju-base
 ```
 
 After installed this packages, insert de code bellow inside your `.eslintrc`:
