@@ -1,9 +1,9 @@
 {
-  "name": "@caju-beneficios/eslint",
+  "name": "eslint-config-caju-base",
   "version": "1.0.0",
   "description": "Caju ESLint config, following our styleguid",
+  "main": "index.js",
   "scripts": {
-    "lint": "eslint . --ext .js,.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,9 +15,9 @@
     "javascript",
     "caju"
   ],
-  "author": "Caju Empresa Brasileira de Benefícios e Pagamentos Ltda.",
+  "author": "Caju Empresa Brasileira de Benefícios e Pagamentos Ltda. <@caju-beneficios>",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "@typescript-eslint/eslint-plugin": "4.29.2",
     "@typescript-eslint/parser": "4.29.2",
     "eslint-config-airbnb-base": "14.2.1",
