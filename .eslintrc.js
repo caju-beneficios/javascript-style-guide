@@ -2,7 +2,24 @@ module.exports = {
   extends: [
     'airbnb-base',
   ],
+  settings: {
+    'import/resolver': {
+      'node': {
+        'extensions': ['.js', '.jsx', '.ts', '.tsx']
+      }
+    }
+  },
   rules: {
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        'js': 'never',
+        'jsx': 'never',
+        'ts': 'never',
+        'tsx': 'never'
+      }
+    ],
     semi: [2, 'never'],
     'no-multiple-empty-lines': [
       'error',
@@ -62,6 +79,10 @@ module.exports = {
       plugins: [
         '@typescript-eslint',
       ],
+      rules: {
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': ['error']
+      }
     },
   ],
 }
