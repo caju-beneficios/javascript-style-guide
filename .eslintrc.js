@@ -1,16 +1,19 @@
 module.exports = {
   extends: [
     'airbnb-base',
+    'plugin:@typescript-eslint/recommended',
   ],
   plugins: [
-    'sort-destructure-keys'
+    'sort-destructure-keys',
+    '@typescript-eslint',
   ],
+  parser: '@typescript-eslint/parser',
   settings: {
     'import/resolver': {
-      'node': {
-        'extensions': ['.js', '.jsx', '.ts', '.tsx']
-      }
-    }
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
   rules: {
     'multiline-ternary': ['error', 'always-multiline'],
@@ -18,11 +21,11 @@ module.exports = {
       'error',
       'ignorePackages',
       {
-        'js': 'never',
-        'jsx': 'never',
-        'ts': 'never',
-        'tsx': 'never'
-      }
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
     ],
     semi: [2, 'never'],
     'no-multiple-empty-lines': [
@@ -72,22 +75,15 @@ module.exports = {
         max: 3,
       },
     ],
-    'sort-destructure-keys/sort-destructure-keys': ['error']
+    'sort-destructure-keys/sort-destructure-keys': ['error'],
   },
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
-      extends: [
-        'plugin:@typescript-eslint/recommended',
-      ],
-      parser: '@typescript-eslint/parser',
-      plugins: [
-        '@typescript-eslint',
-      ],
       rules: {
         'no-use-before-define': 'off',
-        '@typescript-eslint/no-use-before-define': ['error']
-      }
+        '@typescript-eslint/no-use-before-define': ['error'],
+      },
     },
   ],
 }
