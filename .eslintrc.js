@@ -2,6 +2,9 @@ module.exports = {
   extends: [
     'airbnb-base',
   ],
+  plugins: [
+    'sort-destructure-keys'
+  ],
   settings: {
     'import/resolver': {
       'node': {
@@ -10,6 +13,7 @@ module.exports = {
     }
   },
   rules: {
+    'multiline-ternary': ['error', 'always-multiline'],
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -68,6 +72,7 @@ module.exports = {
         max: 3,
       },
     ],
+    'sort-destructure-keys/sort-destructure-keys': ['error']
   },
   overrides: [
     {
