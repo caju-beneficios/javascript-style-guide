@@ -9,6 +9,15 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   settings: {
+    'import/extensions': [
+      'never',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -16,6 +25,15 @@ module.exports = {
     },
   },
   rules: {
+    '@typescript-eslint/explicit-function-return-type': [
+      'off',
+      {
+        allowExpressions: true,
+      },
+    ],
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-unused-vars': ['error'],
+    '@typescript-eslint/no-use-before-define': 'off',
     'multiline-ternary': ['error', 'always-multiline'],
     'import/extensions': [
       'error',
@@ -83,6 +101,7 @@ module.exports = {
       rules: {
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': ['error'],
+        '@typescript-eslint/explicit-function-return-type': ['error'],
       },
     },
   ],
